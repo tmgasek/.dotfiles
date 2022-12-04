@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 alias spotify="/usr/bin/spotify --force-device-scale-factor=1.5"
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:/usr/local/go/bin

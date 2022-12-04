@@ -1,6 +1,6 @@
 local nnoremap = require("tmg.keymap").nnoremap
 local vnoremap = require("tmg.keymap").vnoremap
-
+local inoremap = require("tmg.keymap").inoremap
 local silent = { silent = true }
 
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
@@ -14,9 +14,18 @@ nnoremap("<C-u>", "<C-u>zz")
 nnoremap("n", "nzzzv")
 nnoremap("N", "Nzzzv")
 
+
+-- Copilot
+vim.cmd("imap <silent><script><expr> <C-y> copilot#Accept('<End>')")
+vim.cmd("let g:copilot_no_tab_map = v:true")
+vim.cmd("let g:copilot_assume_mapped = v:true")
+
+
+
 -- Navigate buffers
 nnoremap("<S-l>", "<cmd>bnext<CR>")
 nnoremap("<S-h>", "<cmd>bprevious<CR>")
+
 
 -- bruh moment
 vnoremap("J", ":m '>+1<CR>gv=gv")
