@@ -1,0 +1,7 @@
+vim.cmd("autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2")
+vim.cmd("autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2 softtabstop=2")
+vim.cmd("autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2")
+vim.cmd("autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2")
+vim.cmd("autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2")
+vim.cmd("autocmd FileType javascriptreact setlocal shiftwidth=2 tabstop=2 softtabstop=2")
+vim.cmd("autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2")
