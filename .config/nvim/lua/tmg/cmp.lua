@@ -71,17 +71,9 @@ cmp.setup({
         -- end,
     },
 
-    -- Youtube:
-    --    the order of your sources matter (by default). That gives them priority
-    --    you can configure:
-    --        keyword_length
-    --        priority
-    --        max_item_count
-    --        (more?)
     sources = {
         { name = "gh_issues" },
 
-        -- Youtube: Could enable this only for lua, but nvim_lua handles that already.
         { name = "nvim_lua" },
 
         { name = "nvim_lsp" },

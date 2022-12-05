@@ -16,9 +16,9 @@ nnoremap("N", "Nzzzv")
 
 
 -- Copilot
-vim.cmd("imap <silent><script><expr> <C-y> copilot#Accept('<End>')")
-vim.cmd("let g:copilot_no_tab_map = v:true")
-vim.cmd("let g:copilot_assume_mapped = v:true")
+-- vim.cmd("imap <silent><script><expr> <C-y> copilot#Accept('<End>')")
+-- vim.cmd("let g:copilot_no_tab_map = v:true")
+-- vim.cmd("let g:copilot_assume_mapped = v:true")
 
 
 
