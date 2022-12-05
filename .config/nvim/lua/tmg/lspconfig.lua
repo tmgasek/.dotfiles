@@ -3,6 +3,11 @@ if not status_ok then
     return
 end
 
+require("mason-lspconfig").setup({
+    ensure_installed = { "sumneko_lua", "rust_analyzer", "tsserver", "cssls", "gopls" },
+    automatic_installation = true
+})
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap = true, silent = true }
