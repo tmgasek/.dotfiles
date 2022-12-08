@@ -2,6 +2,7 @@ local status_ok, lspconfig = pcall(require, "lspconfig")
 if not status_ok then
     return
 end
+local protocol = require('vim.lsp.protocol')
 
 require("mason-lspconfig").setup({
     ensure_installed = { "sumneko_lua", "rust_analyzer", "tsserver", "cssls", "gopls" },
@@ -41,6 +42,27 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
     vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
+
+-- Diagnostic symbols in the sign column (gutter)
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
+-- Auto format, needs ussed in on attach
+local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
+local enable_format_on_save = function(_, bufnr)
+    vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+        group = augroup_format,
+        buffer = bufnr,
+        callback = function()
+            vim.lsp.buf.format({ bufnr = bufnr })
+        end,
+    })
+end
+
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -105,4 +127,9 @@ lspconfig.denols.setup {
 lspconfig.prismals.setup {
     on_attach = on_attach,
     capabilities = capabilities,
+}
+
+lspconfig.astro.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
 }

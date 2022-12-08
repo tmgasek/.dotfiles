@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
     use 'sainnhe/everforest'
     use 'sainnhe/sonokai'
     use "Shatur/neovim-ayu"
+    use 'bluz71/vim-nightfly-colors'
 
     use {
         'nvim-lualine/lualine.nvim',
