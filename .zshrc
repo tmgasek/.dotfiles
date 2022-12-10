@@ -71,6 +71,7 @@ ZSH_THEME="eastwood"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  zsh-nvm
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -104,15 +105,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
-alias spotify="/usr/bin/spotify --force-device-scale-factor=1.5"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:/usr/local/go/bin
 export DENO_INSTALL="/home/tmg/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH" 
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#757575'
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
+
+eval "$(starship init zsh)"
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
