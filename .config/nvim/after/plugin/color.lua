@@ -24,5 +24,7 @@ require('kanagawa').setup({
 })
 
 
+require'colorizer'.setup()
+
 vim.cmd("colorscheme kanagawa")
 -- { Error = " ", Warn = " ", Hint = " ", Info = " " }

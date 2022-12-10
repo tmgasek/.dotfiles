@@ -73,6 +73,12 @@ return require('packer').startup(function(use)
             }
         end
     }
+    use 'norcalli/nvim-colorizer.lua'
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+    use 'windwp/nvim-ts-autotag'
     -- use("github/copilot.vim")
 
 
