@@ -73,13 +73,11 @@ cmp.setup({
 
     sources = {
         { name = "gh_issues" },
-
         { name = "nvim_lua" },
-
         { name = "nvim_lsp" },
         { name = "path" },
         { name = "luasnip" },
-        { name = "buffer", keyword_length = 5 },
+        { name = "buffer" },
     },
 
     sorting = {
@@ -121,6 +119,7 @@ cmp.setup({
         -- Youtube: How to set up nice formatting for your sources.
         format = lspkind.cmp_format({
             with_text = true,
+            maxwidth = 50,
             menu = {
                 buffer = "[buf]",
                 nvim_lsp = "[LSP]",
