@@ -114,7 +114,6 @@ cmp.setup({
             require("luasnip").lsp_expand(args.body)
         end,
     },
-
     formatting = {
         -- Youtube: How to set up nice formatting for your sources.
         format = lspkind.cmp_format({
@@ -140,3 +139,8 @@ cmp.setup({
         ghost_text = false,
     },
 })
+-- from Takuya, I have no idea wtf this does :D
+vim.cmd [[
+  set completeopt=menuone,noinsert,noselect
+  highlight! default link CmpItemKind CmpItemMenuDefault
+]]

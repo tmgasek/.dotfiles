@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
     }
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")
+    use { "nvim-telescope/telescope-file-browser.nvim" }
     use {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
@@ -61,6 +62,7 @@ return require('packer').startup(function(use)
     use('ThePrimeagen/harpoon')
     use "lukas-reineke/indent-blankline.nvim"
     use('mbbill/undotree')
+    use 'nvim-tree/nvim-web-devicons'
     use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
     use 'ThePrimeagen/vim-be-good'
     use {
@@ -74,11 +76,13 @@ return require('packer').startup(function(use)
         end
     }
     use 'norcalli/nvim-colorizer.lua'
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
+    use("windwp/nvim-autopairs")
     use 'windwp/nvim-ts-autotag'
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
     -- use("github/copilot.vim")
 
 

@@ -10,5 +10,7 @@ require("tmg.lualine")
 -- require("tmg.lspsaga")
 require("tmg.indent-blankline")
 require("tmg.bufferline")
+require("tmg.autopairs")
+require("tmg.telescope")
 
 require("luasnip.loaders.from_vscode").lazy_load()
