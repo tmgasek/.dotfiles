@@ -5,6 +5,8 @@ end
 
 lspkind.init()
 
+require("luasnip.loaders.from_vscode").lazy_load()
+
 local cmp = require("cmp")
 cmp.setup({
     mapping = {
@@ -144,3 +146,5 @@ vim.cmd [[
   set completeopt=menuone,noinsert,noselect
   highlight! default link CmpItemKind CmpItemMenuDefault
 ]]
+
+

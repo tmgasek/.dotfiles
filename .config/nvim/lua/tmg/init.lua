@@ -13,4 +13,3 @@ require("tmg.bufferline")
 require("tmg.autopairs")
 require("tmg.telescope")
 
-require("luasnip.loaders.from_vscode").lazy_load()
