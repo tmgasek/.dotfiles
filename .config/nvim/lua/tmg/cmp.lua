@@ -120,7 +120,7 @@ cmp.setup({
         -- Youtube: How to set up nice formatting for your sources.
         format = lspkind.cmp_format({
             with_text = true,
-            maxwidth = 50,
+            maxwidth = 20,
             menu = {
                 buffer = "[buf]",
                 nvim_lsp = "[LSP]",

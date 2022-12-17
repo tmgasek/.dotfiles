@@ -1,10 +1,10 @@
 local nnoremap = require("tmg.keymap").nnoremap
 local vnoremap = require("tmg.keymap").vnoremap
 local inoremap = require("tmg.keymap").inoremap
+local xnoremap = require("tmg.keymap").xnoremap
 local silent = { silent = true }
 
 nnoremap("<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
--- nnoremap("<leader>pv", "<cmd>Ex<CR>")
 nnoremap("<C-k>", "<cmd>cnext<CR>zz")
 nnoremap("<C-j>", "<cmd>cprev<CR>zz")
 nnoremap("<leader>k", "<cmd>lnext<CR>zz")
@@ -21,6 +21,17 @@ nnoremap("<S-h>", "<cmd>bprevious<CR>")
 -- bruh moment
 vnoremap("J", ":m '>+1<CR>gv=gv")
 vnoremap("K", ":m '<-2<CR>gv=gv")
+
+-- cool remap to keep pasting over stuff and not lose original copy 
+xnoremap("<leader>p", "\"_dP")
+
+-- yank /delete stuff into system clipboard
+nnoremap("<leader>y", "\"+y")
+vnoremap("<leader>y", "\"+y")
+nnoremap("<leader>Y", "\"+Y")
+
+nnoremap("<leader>d", "\"_d")
+vnoremap("<leader>d", "\"_d")
 
 -- Telescope
 nnoremap("<leader>pp",
