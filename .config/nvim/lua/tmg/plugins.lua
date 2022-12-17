@@ -31,6 +31,8 @@ return require('packer').startup(function(use)
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")
     use { "nvim-telescope/telescope-file-browser.nvim" }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
+
     use {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",

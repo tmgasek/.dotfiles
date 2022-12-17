@@ -1,7 +1,5 @@
 require("tmg.set")
 require("tmg.remap")
-require("mason").setup()
-require("mason-lspconfig").setup()
 require("tmg.lspconfig")
 require("tmg.cmp")
 require("tmg.null-ls")
