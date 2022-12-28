@@ -13,10 +13,13 @@ null_ls.setup({
     sources = {
         formatting.prettier.with({}),
         formatting.black.with({ extra_args = { "--fast" } }),
+        -- diagnostics.eslint.with({
+        --     diagnostics_format = '[eslint] #{m}\n(#{c})'
+        -- }),
         diagnostics.eslint_d.with({
             diagnostics_format = '[eslint] #{m}\n(#{c})'
         })
         -- formatting.yapf,
-        --diagnostics.eslint_d
+        -- diagnostics.eslint_d
     },
 })

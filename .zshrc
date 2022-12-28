@@ -116,7 +116,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#757575'
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

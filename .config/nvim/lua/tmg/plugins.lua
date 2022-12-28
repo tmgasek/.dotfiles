@@ -65,6 +65,16 @@ return require('packer').startup(function(use)
         tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
     }
     use('tpope/vim-fugitive')
+    use({
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    })
+    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
     use('ThePrimeagen/harpoon')
     use "lukas-reineke/indent-blankline.nvim"
     use('mbbill/undotree')

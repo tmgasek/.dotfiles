@@ -10,4 +10,4 @@ require("tmg.indent-blankline")
 require("tmg.bufferline")
 require("tmg.autopairs")
 require("tmg.telescope")
-
+require("tmg.ufo")
