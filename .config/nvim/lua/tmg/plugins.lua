@@ -7,22 +7,10 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     -- Themes
-    use 'folke/tokyonight.nvim'
-    use { "catppuccin/nvim", as = "catppuccin" }
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-    })
     use "rebelot/kanagawa.nvim"
     use "sainnhe/gruvbox-material"
-    use "gruvbox-community/gruvbox"
-    use { 'embark-theme/vim', as = 'embark' }
-    use 'bluz71/vim-moonfly-colors'
-    use "EdenEast/nightfox.nvim"
     use 'sainnhe/everforest'
-    use 'sainnhe/sonokai'
-    use "Shatur/neovim-ayu"
-    use 'bluz71/vim-nightfly-colors'
+    use 'aktersnurra/no-clown-fiesta.nvim'
 
     use {
         'nvim-lualine/lualine.nvim',

@@ -2,7 +2,8 @@ require("nvim-treesitter.configs").setup({
     ensure_installed = "all",
     sync_install = false,
     indent = {
-        enable = true
+        enable = true,
+        disable = { "python" }
     },
     highlight = {
         enable = true,
