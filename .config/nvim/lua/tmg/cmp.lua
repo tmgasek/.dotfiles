@@ -76,7 +76,11 @@ cmp.setup({
     sources = {
         { name = "gh_issues" },
         { name = "nvim_lua" },
-        { name = "nvim_lsp" },
+        {
+            name = "nvim_lsp",
+            keyword_length = 3,
+            max_item_count = 30,
+        },
         { name = "path" },
         { name = "luasnip" },
         { name = "buffer" },
@@ -121,6 +125,7 @@ cmp.setup({
         format = lspkind.cmp_format({
             with_text = true,
             maxwidth = 20,
+
             menu = {
                 buffer = "[buf]",
                 nvim_lsp = "[LSP]",
@@ -146,5 +151,3 @@ vim.cmd [[
   set completeopt=menuone,noinsert,noselect
   highlight! default link CmpItemKind CmpItemMenuDefault
 ]]
-
-

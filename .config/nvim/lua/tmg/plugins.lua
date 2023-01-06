@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
     use "sainnhe/gruvbox-material"
     use 'sainnhe/everforest'
     use 'aktersnurra/no-clown-fiesta.nvim'
+    use 'gruvbox-community/gruvbox'
 
     use {
         'nvim-lualine/lualine.nvim',
