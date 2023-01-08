@@ -20,6 +20,7 @@ telescope.setup {
                 ['<C-d>'] = false,
             },
         },
+        -- layout_strategy = "flex",
     },
     extensions = {
         file_browser = {
@@ -28,6 +29,21 @@ telescope.setup {
             initial_mode = "normal",
             hijack_netrw = true,
             hidden = true,
+            respect_gitignore = false,
+            grouped = true,
+            layout_strategy = "flex",
+            layout_config = {
+                width = 0.9,
+                height = 0.9,
+                prompt_position = "top",
+                -- preview_cutoff = 120,
+                -- horizontal = {
+                --     mirror = false,
+                -- },
+                -- vertical = {
+                --     mirror = false,
+                -- },
+            },
             mappings = {
                 -- your custom insert mode mappings
                 ["i"] = {
@@ -51,10 +67,5 @@ vim.keymap.set("n", "<leader>pv", function()
     telescope.extensions.file_browser.file_browser({
         path = "%:p:h",
         cwd = telescope_buffer_dir(),
-        respect_gitignore = false,
-        hidden = true,
-        grouped = true,
-        initial_mode = "normal",
-        layout_config = { height = 40 }
     })
 end)
