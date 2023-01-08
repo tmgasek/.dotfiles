@@ -78,7 +78,7 @@ cmp.setup({
         { name = "nvim_lua" },
         {
             name = "nvim_lsp",
-            keyword_length = 3,
+            -- keyword_length = 3,
             max_item_count = 30,
         },
         { name = "path" },

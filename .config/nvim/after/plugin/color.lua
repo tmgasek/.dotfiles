@@ -1,9 +1,9 @@
 vim.opt.background = "dark"
-vim.g.gruvbox_contrast_dark = 'hard'
 vim.g.gruvbox_material_background = 'hard'
 vim.g.gruvbox_material_foreground = 'mix'
 vim.g.gruvbox_material_enable_bold = 1
--- vim.g.gruvbox_invert_selection = '0'
+
+vim.g.gruvbox_material_transparent_background = 1
 vim.g.everforest_background = 'hard'
 
 -- Default options:
